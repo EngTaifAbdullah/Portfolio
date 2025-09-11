@@ -121,8 +121,8 @@ nav button:hover {
 
 /* ============================================================================================== */
 
-/* Hero Section */
-#hero {
+/* TAIF Section */
+#TAIF {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -134,8 +134,8 @@ nav button:hover {
   /* الكلام الوصف */
   color: #997353;
 }
-#hero h2 { font-size: 2.5rem; }
-#hero span { color: #997353; }
+#TAIF h2 { font-size: 2.5rem; }
+#TAIF span { color: #997353; }
 
 /* Buttons */
 .btn {
@@ -243,14 +243,19 @@ footer {
   color: #ffffff;
 }
 
-.dark-mode nav a {
-  color: #ffffff;        
-  transition: color 0.3s;
+
+.dark-mode nav a,
+.dark-mode nav button {
+  background: #5a2b4f;   
+  color: #fff;
+  transition: background 0.3s, color 0.3s;
+}
+.dark-mode nav a:hover,
+.dark-mode nav button:hover {
+  background: #838182;   
 }
 
-.dark-mode nav a:hover {
-  color: #838182;       
-}
+
 
 
 .dark-mode header,
@@ -260,14 +265,16 @@ footer {
 }
 
 
+
 .dark-mode .skill {
   background: #5a2b4f;      
   color: #fff;           
 }
-
 .dark-mode .skill:hover {
   background: #838182;   
 }
+
+
 
 
 .dark-mode .project-card {
@@ -275,29 +282,19 @@ footer {
   color: #fff;               
   box-shadow: 0 2px 8px rgba(0,0,0,0.4);
 }
-
 .dark-mode .project-card:hover {
   background: #5a2b4f;       
 }
 
-.dark-mode nav a {
-  color: #ffffff;
-}
-.dark-mode nav a:hover {
-  color: #5a2b4f;
-}
-.dark-mode button {
-  color: #5a2b4f;
-}
 
-.dark-mode #hero {
+.dark-mode #TAIF {
   background: linear-gradient(rgba(50,50,50,0.8), rgba(92, 77, 97, 0.8));
   color: #ffffff;
 }
-.dark-mode #hero span {
+.dark-mode #TAIF span {
   color: #ffffff;
 }
 .dark-mode .btn {
   background: #5a2b4f;
-  color: #d9ff04;
+  color: #ffffff;
 }
