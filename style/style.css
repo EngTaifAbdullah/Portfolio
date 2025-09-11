@@ -12,10 +12,25 @@ body {
   color: #000;
   transition: background 0.3s, color 0.3s;
 }
-/* --------------------------------- LIGHT ----------------------------------------------------  */
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.8s forwards;
+  animation-delay: 0.3s;
+}
+@keyframes fadeIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+/* ============================================================================================= */
+
 /* Navigation */
 header {
-  background: #4A8B78;
+  background: #DDA853  ;
   color: #fff;
   padding: 15px 20px;
   position: fixed;
@@ -23,112 +38,56 @@ header {
   top: 0;
   z-index: 1000;
 }
+nav { display: flex; justify-content: space-between; align-items: center; }
+nav .logo { font-weight: bold; color: #fff; }
+nav ul { list-style: none; display: flex; gap: 20px; }
+nav a { color: #fff; text-decoration: none; transition: 0.3s; }
+nav a:hover { color: #b42b2b; }
+button { cursor: pointer; border: none; background: transparent; color: #ff0a0a; font-size: 1.2rem; transition: color 0.3s; }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
-nav .logo {
-  font-weight: bold;
-  color: #fff;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  transition: 0.3s;
-}
-nav a:hover {
-  color: #ffff00;
-}
-
-button {
-  cursor: pointer;
-  border: none;
-  background: transparent;
-  color: #80237a;
-  font-size: 1.2rem;
-  transition: color 0.3s;
-}
-
-/* Hero Section */
+/* الواجهه */
 #hero {
   height: 100vh;
-  background: linear-gradient(rgba(224, 235, 227, 0.6), rgba(29, 194, 142, 0.6)), center/cover;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #4A8B78;
+  background: linear-gradient(rgba(248, 248, 219, 0.6), rgba(245, 246, 222, 0.6));
+  color: #210f63;
 }
+#hero h2 { font-size: 2.5rem; }
+/* اسمي */
+#hero span { color: #958F81 ; }
 
-#hero h2 {
-  font-size: 2.5rem;
-}
-/* اسمي  */
-#hero span {
-  color: #1e7f72;
-}
 
-/* Button */
+
+/* Buttons */
 .btn {
   display: inline-block;
   margin-top: 15px;
   padding: 10px 20px;
-  background: #e29552;
+  background: #958F81;
   color: #fff;
   border-radius: 5px;
   text-decoration: none;
-  transition: background 0.3s, transform 0.2s;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
 }
+.btn:hover { background: #ffc402; transform: scale(1.05); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); }
 
-.btn:hover {
-  background: #e2eb3a; 
-  transform: scale(1.05);
-}
 
 
 
 /* Sections */
-section {
-  padding: 80px 20px;
-  text-align: center;
-}
-section h2 {
-  margin-bottom: 20px;
-  font-size: 2rem;
-  color: #155642;
-  transition: color 0.3s;
-}
-
-
-
-
-/* اللون في الوضع الداكن */
-.dark-mode section h2 {
-  color: #ffcc00;
-}
-
-
+section { padding: 80px 20px; text-align: center; }
+section h2 { margin-bottom: 20px; font-size: 2rem; color: #3c947a; }
 
 
 
 
 /* Skills */
-.skills-container {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-}
+.skills-container { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
 .skill {
   padding: 10px 20px;
   background: #e29552;
@@ -136,18 +95,12 @@ section h2 {
   border-radius: 5px;
   transition: background 0.3s, transform 0.3s;
 }
-.skill:hover {
-  background: #e2eb3a;
-  transform: scale(1.05);
-}
+.skill:hover { background: #b3117f; transform: scale(1.05); }
+
+
 
 /* Projects */
-.projects-container {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
+.projects-container { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
 .project-card {
   background: #fff;
   border-radius: 8px;
@@ -156,102 +109,72 @@ section h2 {
   padding: 15px;
   transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
 }
-.project-card img {
-  width: 100%;
-  border-radius: 8px;
-}
-.project-card a {
-  display: inline-block;
-  margin-top: 10px;
-  color: #e29552;
-  text-decoration: none;
-}
+.project-card img { width: 100%; border-radius: 8px; }
+.project-card a { color: #e29552; text-decoration: none; }
+.project-card:hover { background: #f1f1f1; transform: translateY(-10px) scale(1.02); box-shadow: 0 6px 15px rgba(0,0,0,0.2); }
 
-.project-card:hover {
-  background: #faff95;
-  transform: translateY(-8px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+
+/* Contact Form */
+.contact-form {
+  max-width: 200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  transition: background 0.3s, color 0.3s;
+}
+.contact-form textarea { resize: vertical; min-height: 120px; }
+.contact-form button {
+  padding: 12px;
+  background: #e29552;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+.contact-form button:hover { background: #28a745; transform: scale(1.05); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
 
 /* Footer */
-footer {
-  background: #4A8B78;
-  color: #fff;
-  text-align: center;
-  padding: 15px;
+footer { background: #4A8B78; color: #fff; text-align: center; padding: 15px; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .projects-container { flex-direction: column; align-items: center; }
+  .skills-container { flex-direction: column; align-items: center; }
+  .contact-form { padding: 0 20px; }
 }
 
-/* ---------------- DARK MODE ---------------- */
+
+
+
+/* ------------------------------------------------------------------------------------------------
+ */
+/* Dark Mode */
 .dark-mode {
-  background: #535151;
-  color: #f5f5f5;
+  background: #111; color: #f5f5f5;
 }
-
-/* Header & Footer */
-.dark-mode header {
-  background: #535151;
-  color: #f5f5f5;
-}
-.dark-mode footer {
-  background: #535151;
-  color: #f5f5f5;
-}
-
-/* Links */
-.dark-mode nav a {
-  color: #ffffff;
-}
-.dark-mode nav a:hover {
-  color: #fff;
-}
-
-/* Button toggle */
-.dark-mode button {
-  color: #faff95;
-}
-
-/* Hero */
-.dark-mode #hero {
-  background: linear-gradient(rgba(124, 46, 138, 0.8), rgba(20, 20, 20, 0.8)), center/cover;
-  color: #cc10d6;
-}
-.dark-mode #hero span {
-  color: #fff;
-}
-
-/* Buttons */
-.dark-mode .btn {
-  background: #cc10d6;
-  color: #fff;
-}
-.dark-mode .btn:hover {
-  background: #faff95;
-  color: #e82222;
-  transform: scale(1.05);
-}
-
-/* Skills */
-.dark-mode .skill {
-  background: #444;
-  color: #cc10d6;
-}
-.dark-mode .skill:hover {
-  background: #faff95;
-  color: #535151;
-  transform: scale(1.05);
-}
-
-/* Projects */
-.dark-mode .project-card {
-  background: #4a4949;
-  color: #fff;
-  box-shadow: 0 2px 8px rgba(190, 44, 44, 0.1);
-}
-.dark-mode .project-card:hover {
-  background: #cc10d6;
-  transform: translateY(-8px);
-  box-shadow: 0 4px 12px rgba(250, 250, 250, 0.2);
-}
-.dark-mode .project-card a {
-  color: #cc10d6;
-}
+.dark-mode header, .dark-mode footer { background: #222; color: #f5f5f5; }
+.dark-mode nav a { color: #ffcc00; }
+.dark-mode nav a:hover { color: #fff; }
+.dark-mode button { color: #ffcc00; }
+.dark-mode #hero { background: linear-gradient(rgba(50,50,50,0.8), rgba(20,20,20,0.8)); color: #ffcc00; }
+.dark-mode #hero span { color: #fff; }
+.dark-mode .btn { background: #444; color: #fff; }
+.dark-mode .btn:hover { background: #00cc66; color: #000; }
+.dark-mode .skill { background: #444; color: #ffcc00; }
+.dark-mode .skill:hover { background: #00cc66; color: #000; }
+.dark-mode .project-card { background: #333; color: #fff; box-shadow: 0 2px 8px rgba(255,255,255,0.1); }
+.dark-mode .project-card:hover { background: #444; transform: translateY(-10px) scale(1.02); box-shadow: 0 6px 15px rgba(255,255,255,0.2); }
+.dark-mode .project-card a { color: #ffcc00; }
+.dark-mode .contact-form input,
+.dark-mode .contact-form textarea { background: #222; color: #fff; border: 1px solid #555; }
+.dark-mode .contact-form button { background: #444; color: #ffcc00; }
+.dark-mode .contact-form button:hover { background: #00cc66; color: #000; }
