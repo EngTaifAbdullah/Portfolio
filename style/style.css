@@ -311,6 +311,10 @@ footer {
   background: #5a2b4f;
   color: #ffffff;
 }
+.dark-mode .btn:hover {
+ color: white;
+  background: #838182 ;
+}
 /* ======================= */
 
 .dark-mode .contact img.contact {
