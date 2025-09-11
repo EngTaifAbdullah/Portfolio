@@ -215,12 +215,31 @@ section h2 {
   box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
 
+/* ============================================ Contact =========================================== */
 
-/* ============================================================================================== */
+.contact {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 20px;
+}
 
+.contact a {
+  display: inline-block;
+}
 
+.contact img.contact {
+  width: 40px;  
+  height: 40px;
+  transition: transform 0.3s ease;
+}
 
-/* Footer */
+.contact img.contact:hover {
+  transform: scale(1.2);
+}
+
+/* ============================================ Footrs ================================================== */
+
 footer {
   background: #997353;
   color: #fff;
@@ -228,8 +247,6 @@ footer {
   padding: 15px;
   border-radius: 15px 15px 0 0;
 }
-
-
 
 
 /* ========================= How To Convert The ((MODE)) I Take It From YouTube ======================= */
@@ -295,3 +312,10 @@ footer {
   color: #ffffff;
 }
 /* ======================= */
+
+.dark-mode .contact img.contact {
+  filter: brightness(0.9);
+}
+
+/* ======================= */
+
