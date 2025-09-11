@@ -14,7 +14,7 @@ body {
 }
 
 
-/* ============================================================================================== */
+/* ================================ This Animation I Take It from YouTube ================================= */
 
 /* Fade-in animation */
 .fade-in {
@@ -27,9 +27,9 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ============================================================================================== */
+/* ============================================ Header AND Menu =========================================== */
 
-/* Header AND Menu */
+
 
 header {
   background: #997353;
@@ -46,7 +46,8 @@ header {
   justify-content: right;
   align-items: center;
 }
-/* =============================== This Animation I Take It from YouTube ========================================= */
+
+/* =============================== Also This Animation I Take It from YouTube ========================================= */
 
 @keyframes slideDown {
   from {
@@ -65,9 +66,8 @@ nav {
   align-items: center;
 }
 
-/* ============================================================================================== */
+/* ============================================ Menu AND Logo Setting ========================================== */
 
-/* Logo Setting  */
 
 .nav-logo {
   height: 150px;          
@@ -83,7 +83,7 @@ nav {
 }
 
 
-/* Navigation Links */
+/* /////// Distant between Catogers /////// */
 nav ul {
   list-style: none;
   display: flex;
@@ -102,7 +102,7 @@ nav a:hover {
   color: #ffffff;
 }
 
-/* ============================================================================================== */
+/* ======================================== Ubout Navigation Menu ============================================ */
 
 nav button {
   cursor: pointer;
@@ -119,9 +119,9 @@ nav button:hover {
   color: #fff;
 }
 
-/* ============================================================================================== */
+/* ============================================ TAIF Section ============================================== */
 
-/* TAIF Section */
+
 #TAIF {
   height: 100vh;
   display: flex;
@@ -164,9 +164,9 @@ section h2 {
   font-size: 2rem;
   color: #e0ac81;
 }
-/* ============================================================================================== */
+/* ============================================= Skills ================================================= */
 
-/* Skills */
+
 .skills-container {
   display: flex;
   justify-content: center;
@@ -184,9 +184,9 @@ section h2 {
   background: #e29552;
   transform: scale(1.05);
 }
-/* ============================================================================================== */
 
-/* Projects */
+/* ========================================= Projects ============================================= */
+
 .projects-container {
   display: flex;
   justify-content: center;
@@ -208,11 +208,7 @@ section h2 {
   border-radius: 8px;
 }
 
-/* .project-card a {
-  color: #96c00c;
-  text-decoration: none;
-} */
- 
+
 .project-card:hover {
   background: #e29552;
   transform: translateY(-10px) scale(1.02);
@@ -221,6 +217,8 @@ section h2 {
 
 
 /* ============================================================================================== */
+
+
 
 /* Footer */
 footer {
@@ -243,6 +241,7 @@ footer {
   color: #ffffff;
 }
 
+/* ======================= */
 
 .dark-mode nav a,
 .dark-mode nav button {
@@ -255,16 +254,14 @@ footer {
   background: #838182;   
 }
 
-
-
+/* ======================= */
 
 .dark-mode header,
 .dark-mode footer {
   background: #5a2b4f;
   color: #ffffff;
 }
-
-
+/* ======================= */
 
 .dark-mode .skill {
   background: #5a2b4f;      
@@ -273,9 +270,7 @@ footer {
 .dark-mode .skill:hover {
   background: #838182;   
 }
-
-
-
+/* ======================= */
 
 .dark-mode .project-card {
   background: #444;          
@@ -286,9 +281,10 @@ footer {
   background: #5a2b4f;       
 }
 
+/* ======================= */
 
 .dark-mode #TAIF {
-  background: linear-gradient(rgba(50,50,50,0.8), rgba(92, 77, 97, 0.8));
+  background: linear-gradient(rgba(50,50,50,0.8), rgba(106, 88, 112, 0.8));
   color: #ffffff;
 }
 .dark-mode #TAIF span {
@@ -298,3 +294,4 @@ footer {
   background: #5a2b4f;
   color: #ffffff;
 }
+/* ======================= */

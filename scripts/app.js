@@ -1,5 +1,5 @@
 
-// Actiuly !! this code : How To Convert The ((MODE)) I Take It From YouTube
+// Actiuly !! this code : How To Convert The (( MODE From Light TO Dark )) I Take It From YouTube
 
 
 const toggleBtn = document.getElementById ("mode-toggle");
